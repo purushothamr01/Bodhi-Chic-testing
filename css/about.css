@@ -1,0 +1,382 @@
+/* ══════════════════════════════════════
+   BODHI CHIC – About Page Styles
+   ══════════════════════════════════════ */
+
+/* ── Active nav link ── */
+.nav-active {
+  color: var(--gold-light) !important;
+  position: relative;
+}
+.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 1px;
+  background: var(--gold-light);
+}
+
+/* ── Page Hero ── */
+.page-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 30%, #1e1060 0%, #0d0b2a 65%, #060418 100%);
+  padding-top: 72px;
+}
+.page-hero-content { position: relative; z-index: 2; padding: 4rem 2rem 5rem; }
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 300; line-height: 1.2; color: var(--white);
+  margin: 1rem 0;
+  text-shadow: 0 0 60px rgba(180,120,255,0.25);
+}
+.page-hero-title em { color: var(--lavender); font-style: italic; }
+.page-hero-sub {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: rgba(200,180,240,0.75); max-width: 520px;
+  margin: 0 auto; line-height: 1.8;
+}
+.hero-arc {
+  position: absolute; bottom: -1px; left: 0; right: 0;
+  pointer-events: none;
+}
+.hero-arc svg { display: block; width: 100%; height: 60px; }
+
+/* ── Intro Section ── */
+.intro-section {
+  background: linear-gradient(180deg, #110a38 0%, var(--indigo) 100%);
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 5rem; align-items: center;
+}
+@media (max-width: 900px) {
+  .intro-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+/* Portrait */
+.intro-portrait { position: relative; display: flex; justify-content: center; }
+.portrait-frame {
+  width: 320px; height: 320px; border-radius: 50%;
+  position: relative; flex-shrink: 0;
+}
+.portrait-inner {
+  width: 100%; height: 100%; border-radius: 50%;
+  background: radial-gradient(ellipse at 40% 35%, #3b1fa8 0%, #1a0e50 50%, #0d0b2a 100%);
+  border: 1px solid rgba(200,180,240,0.2);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1;
+  box-shadow: 0 0 60px rgba(130,60,255,0.25), inset 0 0 40px rgba(180,120,255,0.1);
+}
+.portrait-symbol { font-size: 6rem; filter: drop-shadow(0 0 20px rgba(180,120,255,0.6)); }
+.portrait-glow {
+  position: absolute; inset: -20px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(130,60,255,0.2) 0%, transparent 70%);
+  filter: blur(15px);
+}
+.portrait-rings { position: absolute; inset: 0; }
+.ring {
+  position: absolute; border-radius: 50%;
+  border: 1px solid rgba(200,180,240,0.12);
+  animation: ring-spin linear infinite;
+}
+.ring-1 { inset: -20px; animation-duration: 18s; border-color: rgba(212,168,67,0.15); }
+.ring-2 { inset: -40px; animation-duration: 28s; animation-direction: reverse; }
+.ring-3 { inset: -60px; animation-duration: 40s; border-color: rgba(212,168,67,0.08); }
+@keyframes ring-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* Stat chips */
+.stat-chip {
+  position: absolute;
+  background: rgba(13,11,42,0.85);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  border-radius: 14px; padding: 0.6rem 1rem;
+  text-align: center; min-width: 110px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+.chip-1 { top: 10%; right: -10%; }
+.chip-2 { bottom: 20%; right: -15%; }
+.chip-3 { bottom: 5%;  left: -5%; }
+.chip-num  { display: block; font-family: var(--font-serif); font-size: 1.5rem; color: var(--gold-light); }
+.chip-label{ display: block; font-size: 0.7rem; color: rgba(200,180,240,0.6); letter-spacing: 0.08em; margin-top: 2px; }
+
+/* Bio text */
+.intro-para {
+  font-size: 1rem; color: rgba(200,180,240,0.8);
+  line-height: 1.9; margin-bottom: 1.25rem;
+}
+.intro-divider {
+  text-align: center; color: rgba(212,168,67,0.4);
+  font-size: 1.1rem; letter-spacing: 0.5em;
+  margin: 1.75rem 0;
+}
+
+/* ── Philosophy ── */
+.philosophy-section {
+  background: radial-gradient(ellipse at 70% 50%, #1a0e50 0%, var(--indigo) 70%);
+  position: relative;
+}
+.philosophy-bg-glow {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 700px; height: 400px; border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(168,85,247,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.philosophy-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+.philosophy-card h3 {
+  font-family: var(--font-serif); font-size: 1.35rem;
+  color: var(--white); margin-bottom: 0.75rem;
+}
+.philosophy-card p { font-size: 0.92rem; color: rgba(200,180,240,0.72); line-height: 1.8; }
+
+/* ── Modalities ── */
+.modalities-section {
+  background: linear-gradient(180deg, var(--indigo) 0%, #110a38 100%);
+}
+.modality-list { display: flex; flex-direction: column; gap: 1px; }
+.modality-item {
+  display: flex; gap: 2rem; align-items: flex-start;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--glass-border);
+  position: relative;
+}
+.modality-item:last-child { border-bottom: none; }
+.modality-num {
+  font-family: var(--font-serif); font-size: 4rem;
+  color: rgba(212,168,67,0.15); line-height: 1;
+  min-width: 80px; flex-shrink: 0;
+}
+.modality-content { display: flex; gap: 1.5rem; align-items: flex-start; flex: 1; }
+.modality-icon-wrap {
+  width: 64px; height: 64px; border-radius: 18px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 2rem;
+  backdrop-filter: blur(10px);
+}
+.modality-text h3 {
+  font-family: var(--font-serif); font-size: 1.5rem;
+  color: var(--white); margin-bottom: 0.75rem;
+}
+.modality-text p { font-size: 0.93rem; color: rgba(200,180,240,0.75); line-height: 1.85; margin-bottom: 1rem; }
+.modality-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.modality-tags span {
+  font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); border: 1px solid rgba(212,168,67,0.3);
+  background: rgba(212,168,67,0.07);
+  padding: 0.25rem 0.7rem; border-radius: 999px;
+}
+@media (max-width: 640px) {
+  .modality-item { flex-direction: column; gap: 1rem; }
+  .modality-num { font-size: 2.5rem; }
+  .modality-content { flex-direction: column; }
+}
+
+/* ── Timeline ── */
+.timeline-section {
+  background: radial-gradient(ellipse at 30% 50%, #1a0e50 0%, var(--indigo) 70%);
+  position: relative; overflow: hidden;
+}
+.timeline-glow {
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 2px; height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(212,168,67,0.3), transparent);
+  pointer-events: none;
+}
+.timeline {
+  display: flex; flex-direction: column; gap: 2rem;
+  position: relative; max-width: 700px; margin: 0 auto;
+  padding-left: 3rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute; left: 8px; top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(200,180,240,0.2), transparent);
+}
+.timeline-item { position: relative; display: grid; grid-template-columns: 60px 1fr; gap: 1.25rem; align-items: start; }
+.timeline-dot {
+  position: absolute; left: -2.65rem; top: 1rem;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 12px var(--glow-gold);
+}
+.timeline-year {
+  font-family: var(--font-serif); font-size: 1rem;
+  color: var(--gold-light); padding-top: 0.9rem;
+  font-weight: 400; letter-spacing: 0.05em; white-space: nowrap;
+}
+.timeline-card h4 {
+  font-family: var(--font-serif); font-size: 1.25rem;
+  color: var(--white); margin-bottom: 0.5rem;
+}
+.timeline-card p { font-size: 0.9rem; color: rgba(200,180,240,0.72); line-height: 1.8; }
+@media (max-width: 640px) {
+  .timeline { padding-left: 2rem; }
+  .timeline-item { grid-template-columns: 50px 1fr; gap: 0.75rem; }
+  .timeline-dot { left: -1.75rem; }
+}
+
+/* ── Values Strip ── */
+.values-strip {
+  background: rgba(255,255,255,0.03);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 2rem 0;
+}
+.values-inner {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.5rem; flex-wrap: wrap;
+}
+.value-item {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(200,180,240,0.65);
+}
+.value-icon { font-size: 1.1rem; }
+.value-sep { color: rgba(212,168,67,0.3); font-size: 0.7rem; }
+
+/* ── About CTA double buttons ── */
+.about-cta-btns {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+}
+
+/* ══════════════════════════════════
+   ABOUT PAGE – Responsive
+   ══════════════════════════════════ */
+
+/* ── Tablet landscape (max 1024px) ── */
+@media (max-width: 1024px) {
+  .intro-grid { grid-template-columns: 360px 1fr; gap: 3.5rem; }
+  .portrait-frame { width: 280px; height: 280px; }
+  .portrait-symbol { font-size: 5rem; }
+  .philosophy-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Tablet portrait (max 900px) ── */
+@media (max-width: 900px) {
+  .intro-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .intro-portrait { margin-bottom: 4rem; }
+
+  /* Centre portrait + show chips closer */
+  .portrait-frame { width: 260px; height: 260px; }
+  .portrait-symbol { font-size: 4.5rem; }
+  .chip-1 { top: 5%;  right: -5%; }
+  .chip-2 { bottom: 15%; right: -8%; }
+  .chip-3 { bottom: 0%;  left: 0%; }
+
+  .page-hero { min-height: 45vh; }
+  .page-hero-content { padding: 3rem 1.5rem 4rem; }
+  .page-hero-title { font-size: clamp(2rem, 6vw, 3.5rem); }
+
+  .philosophy-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+}
+
+/* ── Mobile large (max 768px) ── */
+@media (max-width: 768px) {
+  .page-hero { padding-top: 64px; min-height: 40vh; }
+  .page-hero-content { padding: 2.5rem 1.25rem 3.5rem; }
+  .page-hero-title { font-size: clamp(1.9rem, 8vw, 3rem); }
+  .page-hero-sub { font-size: 0.93rem; }
+
+  /* Intro portrait smaller */
+  .portrait-frame { width: 220px; height: 220px; }
+  .portrait-symbol { font-size: 4rem; }
+  .ring-3 { display: none; } /* hide outer ring on small screens */
+
+  /* Stat chips — row below portrait */
+  .intro-portrait { flex-direction: column; align-items: center; gap: 1.5rem; }
+  .stat-chip {
+    position: static;
+    display: inline-flex; gap: 0.5rem; align-items: center;
+    padding: 0.5rem 1rem; min-width: unset;
+  }
+  .chip-num  { font-size: 1.1rem; display: inline; }
+  .chip-label{ font-size: 0.7rem; display: inline; margin-top: 0; }
+  /* Show all chips in a flex row */
+  .intro-portrait::after {
+    content: '';
+    display: none;
+  }
+  .chip-1, .chip-2, .chip-3 {
+    position: static;
+    flex-shrink: 0;
+  }
+  /* Wrap chips in a row */
+  .portrait-chips-row {
+    display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;
+  }
+
+  .philosophy-grid { grid-template-columns: 1fr; gap: 1rem; }
+
+  /* Modalities */
+  .modality-item { flex-direction: column; gap: 0.75rem; padding: 2rem 0; }
+  .modality-num { font-size: 2rem; min-width: unset; }
+  .modality-content { flex-direction: column; gap: 1rem; }
+  .modality-icon-wrap { width: 52px; height: 52px; font-size: 1.6rem; }
+  .modality-text h3 { font-size: 1.25rem; }
+  .modality-text p { font-size: 0.9rem; }
+
+  /* Timeline */
+  .timeline { padding-left: 2rem; }
+  .timeline-item { grid-template-columns: 48px 1fr; gap: 0.75rem; }
+  .timeline-dot { left: -1.65rem; }
+  .timeline-year { font-size: 0.88rem; }
+  .timeline-card h4 { font-size: 1.1rem; }
+  .timeline-card p { font-size: 0.88rem; }
+
+  /* Values strip */
+  .values-inner { gap: 1rem; }
+  .value-item { font-size: 0.78rem; }
+  .value-sep { display: none; }
+
+  /* CTA buttons */
+  .about-cta-btns { flex-direction: column; align-items: center; }
+  .about-cta-btns .btn-glow,
+  .about-cta-btns .btn-ghost { width: 100%; max-width: 300px; justify-content: center; }
+}
+
+/* ── Mobile small (max 480px) ── */
+@media (max-width: 480px) {
+  .page-hero-title { font-size: clamp(1.7rem, 9vw, 2.4rem); }
+  .portrait-frame  { width: 190px; height: 190px; }
+  .portrait-symbol { font-size: 3.5rem; }
+
+  /* Hide floating stat chips entirely, show as simple badges */
+  .chip-1, .chip-2, .chip-3 { padding: 0.4rem 0.8rem; }
+  .chip-num { font-size: 1rem; }
+
+  .intro-para { font-size: 0.93rem; }
+
+  .modality-icon-wrap { width: 44px; height: 44px; font-size: 1.3rem; border-radius: 12px; }
+  .modality-text h3 { font-size: 1.15rem; }
+
+  .timeline { padding-left: 1.75rem; max-width: 100%; }
+  .timeline-item { grid-template-columns: 42px 1fr; }
+  .timeline-dot { width: 10px; height: 10px; left: -1.45rem; }
+
+  .philosophy-icon { font-size: 1.8rem; }
+  .philosophy-card h3 { font-size: 1.15rem; }
+}
+
+/* ── Extra small (max 360px) ── */
+@media (max-width: 360px) {
+  .page-hero-title { font-size: 1.6rem; }
+  .portrait-frame  { width: 160px; height: 160px; }
+  .portrait-symbol { font-size: 3rem; }
+  .chip-1, .chip-2, .chip-3 { min-width: 80px; }
+  .chip-num { font-size: 0.9rem; }
+  .chip-label { font-size: 0.62rem; }
+  .timeline-item { grid-template-columns: 36px 1fr; gap: 0.5rem; }
+}
+
