@@ -96,70 +96,117 @@
   <!-- ─── SERVICES ─── -->
   <section class="services section-pad" id="services">
     <div class="container">
-      <div class="section-label">✦ Sacred Offerings</div>
-      <h2 class="section-title">Choose Your<br /><em>Path to Healing</em></h2>
+      <div class="section-label" style="text-align:center">✦ Sacred Offerings</div>
+      <h2 class="section-title" style="text-align:center">Choose Your<br /><em>Path to Healing</em></h2>
+      <p class="feedback-subtitle">Every modality is a doorway — choose the one that calls to your soul.</p>
 
-      <div class="services-grid">
+      <div class="premium-services-grid">
 
-        <div class="glass-card service-card float-card">
-          <div class="card-glow"></div>
-          <div class="service-icon">📜</div>
-          <div class="service-badge">Remote</div>
-          <h3 class="service-name">Akashic Records</h3>
-          <p class="service-desc">Decode karmic questions and life patterns. Access the infinite library of your soul's
-            journey across lifetimes.</p>
-          <p class="service-note">Conducted remotely (not on call or in-person).</p>
-          <div class="service-footer">
-            <span class="service-price">₹5,555</span>
-            <a href="akashic-records.html" class="service-btn">View Details</a>
+        <!-- Akashic Records -->
+        <div class="premium-card float-card" id="svc-akashic">
+          <div class="premium-card-img">
+            <img src="images/service-akashic.png" alt="Akashic Records" loading="lazy" />
+            <div class="premium-card-overlay"></div>
+          </div>
+          <div class="premium-card-body">
+            <div class="premium-card-top">
+              <span class="premium-badge">✦ Remote</span>
+              <button class="premium-share-btn" aria-label="Share" onclick="shareService('akashic-records.html', 'Akashic Records')">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+            <h3 class="premium-card-title">Akashic Records</h3>
+            <p class="premium-card-desc">Decode karmic patterns & access the infinite library of your soul's journey across lifetimes.</p>
+            <div class="premium-card-footer">
+              <div class="premium-price-wrap">
+                <span class="premium-price-label">Starting from</span>
+                <span class="premium-price">₹5,555</span>
+              </div>
+              <a href="akashic-records.html" class="premium-cta-btn">Explore <span>→</span></a>
+            </div>
           </div>
         </div>
 
-        <div class="glass-card service-card float-card delay-1">
-          <div class="card-glow"></div>
-          <div class="service-icon">🌿</div>
-          <div class="service-badge">Healing</div>
-          <h3 class="service-name">Reiki &amp; Pranic Healing</h3>
-          <p class="service-desc">Energy healing for physical, emotional, relationship, and financial issues. Restore
-            harmony at every level of being.</p>
-          <p class="service-note">Works on all dimensions of your energy body.</p>
-          <div class="service-footer">
-            <span class="service-price">₹1,500</span>
-            <a href="reiki-healing.html" class="service-btn">View Details</a>
+        <!-- Reiki & Pranic Healing -->
+        <div class="premium-card float-card delay-1" id="svc-reiki">
+          <div class="premium-card-img">
+            <img src="images/service-reiki.png" alt="Reiki & Pranic Healing" loading="lazy" />
+            <div class="premium-card-overlay"></div>
+          </div>
+          <div class="premium-card-body">
+            <div class="premium-card-top">
+              <span class="premium-badge">✦ Healing</span>
+              <button class="premium-share-btn" aria-label="Share" onclick="shareService('reiki-healing.html', 'Reiki & Pranic Healing')">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+            <h3 class="premium-card-title">Reiki &amp; Pranic Healing</h3>
+            <p class="premium-card-desc">Restore harmony across your physical, emotional, relational &amp; financial energy body.</p>
+            <div class="premium-card-footer">
+              <div class="premium-price-wrap">
+                <span class="premium-price-label">Starting from</span>
+                <span class="premium-price">₹1,500</span>
+              </div>
+              <a href="reiki-healing.html" class="premium-cta-btn">Explore <span>→</span></a>
+            </div>
           </div>
         </div>
 
-        <div class="glass-card service-card float-card delay-2">
-          <div class="card-glow"></div>
-          <div class="service-icon">🃏</div>
-          <div class="service-badge">30 mins</div>
-          <h3 class="service-name">Tarot Reading</h3>
-          <p class="service-desc">Gain clarity and receive actionable remedies. Let the cards illuminate your current
-            energy and guide your next steps.</p>
-          <p class="service-note">Includes detailed remedies &amp; guidance.</p>
-          <div class="service-footer">
-            <span class="service-price">₹4,000</span>
-            <a href="tarot-reading.html" class="service-btn">View Details</a>
+        <!-- Tarot Reading -->
+        <div class="premium-card float-card delay-2" id="svc-tarot">
+          <div class="premium-card-img">
+            <img src="images/service-tarot.png" alt="Tarot Reading" loading="lazy" />
+            <div class="premium-card-overlay"></div>
+          </div>
+          <div class="premium-card-body">
+            <div class="premium-card-top">
+              <span class="premium-badge">✦ 30 mins</span>
+              <button class="premium-share-btn" aria-label="Share" onclick="shareService('tarot-reading.html', 'Tarot Reading')">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+            <h3 class="premium-card-title">Tarot Reading</h3>
+            <p class="premium-card-desc">Gain deep clarity and actionable remedies. Let the cards illuminate your energy and next steps.</p>
+            <div class="premium-card-footer">
+              <div class="premium-price-wrap">
+                <span class="premium-price-label">Starting from</span>
+                <span class="premium-price">₹4,000</span>
+              </div>
+              <a href="tarot-reading.html" class="premium-cta-btn">Explore <span>→</span></a>
+            </div>
           </div>
         </div>
 
-        <div class="glass-card service-card float-card delay-3">
-          <div class="card-glow"></div>
-          <div class="service-icon">🙌</div>
-          <div class="service-badge">In-Person</div>
-          <h3 class="service-name">Access Bars &amp; Body Process</h3>
-          <p class="service-desc">In-person sessions to release blockages in health, finances, and relationships. Reset
-            your neural pathways to possibility.</p>
-          <p class="service-note">In-person sessions only.</p>
-          <div class="service-footer">
-            <span class="service-price">₹3,333</span>
-            <a href="access-bars.html" class="service-btn">View Details</a>
+        <!-- Access Bars & Body Process -->
+        <div class="premium-card float-card delay-3" id="svc-access">
+          <div class="premium-card-img">
+            <img src="images/service-accessbars.jpg" alt="Access Bars & Body Process" loading="lazy" />
+            <div class="premium-card-overlay"></div>
+          </div>
+          <div class="premium-card-body">
+            <div class="premium-card-top">
+              <span class="premium-badge">✦ In-Person</span>
+              <button class="premium-share-btn" aria-label="Share" onclick="shareService('access-bars.html', 'Access Bars & Body Process')">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+            <h3 class="premium-card-title">Access Bars &amp; Body Process</h3>
+            <p class="premium-card-desc">Release limiting beliefs from 32 head points. Reset your neural pathways to infinite possibility.</p>
+            <div class="premium-card-footer">
+              <div class="premium-price-wrap">
+                <span class="premium-price-label">Starting from</span>
+                <span class="premium-price">₹3,333</span>
+              </div>
+              <a href="access-bars.html" class="premium-cta-btn">Explore <span>→</span></a>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
   </section>
+
+
 
   <!-- ─── PILLARS ─── -->
   <section class="pillars section-pad">
@@ -213,7 +260,7 @@
                 alt="Client feedback - Thank you mam what all u told is very true" loading="lazy" />
               <div class="feedback-overlay"><span class="feedback-zoom">🔍 View Full</span></div>
             </div>
-            <div class="feedback-quote">"Thank you mam what all u told, that's very true"</div>
+            <div class="feedback-quote">Thank you mam what all u told, that's very true</div>
           </div>
           <!-- Tarot Card 2 -->
           <div class="feedback-card float-card delay-1" onclick="openLightbox('images/feedback/feedback2.png')">
@@ -226,8 +273,8 @@
                 loading="lazy" />
               <div class="feedback-overlay"><span class="feedback-zoom">🔍 View Full</span></div>
             </div>
-            <div class="feedback-quote">"Mam your reading is 100% true they are really torturing me whatever you told is
-              100% correct"</div>
+            <div class="feedback-quote">Mam your reading is 100% true they are really torturing me whatever you told is
+              100% correct</div>
           </div>
           <!-- Tarot Card 3 -->
           <div class="feedback-card float-card delay-2" onclick="openLightbox('images/feedback/feedback3.png')">
@@ -240,7 +287,7 @@
                 loading="lazy" />
               <div class="feedback-overlay"><span class="feedback-zoom">🔍 View Full</span></div>
             </div>
-            <div class="feedback-quote">"How can u be so accurate... U r a superhuman for sure"</div>
+            <div class="feedback-quote">How can u be so accurate... U r a superhuman for sure</div>
           </div>
           <!-- Tarot Card 4 -->
           <div class="feedback-card float-card delay-3" onclick="openLightbox('images/feedback/feedback4.png')">
@@ -253,8 +300,8 @@
                 loading="lazy" />
               <div class="feedback-overlay"><span class="feedback-zoom">🔍 View Full</span></div>
             </div>
-            <div class="feedback-quote">"Mam thanks is very small word you gave me clarity from the bottom of my heart
-              ❤️"</div>
+            <div class="feedback-quote">Mam thanks is very small word you gave me clarity from the bottom of my heart
+              ❤️</div>
           </div>
           <!-- Tarot Card 5 -->
           <div class="feedback-card float-card" onclick="openLightbox('images/feedback/tarot-fb-5.png')">
@@ -267,8 +314,8 @@
                 loading="lazy" />
               <div class="feedback-overlay"><span class="feedback-zoom">🔍 View Full</span></div>
             </div>
-            <div class="feedback-quote">"I didn't believe in tarot but now my views have changed. Your accuracy has
-              helped me in my small business."</div>
+            <div class="feedback-quote">I didn't believe in tarot but now my views have changed. Your accuracy has
+              helped me in my small business.</div>
           </div>
         </div>
       </div>
