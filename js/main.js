@@ -1,4 +1,4 @@
-/* ─── Smooth parallax levitation for floating cards ─── */
+/* --- Smooth parallax levitation for floating cards --- */
 (function () {
   "use strict";
 
@@ -12,6 +12,7 @@
   const hamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobile-menu");
   hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
     mobileMenu.classList.toggle("open");
   });
 
@@ -137,7 +138,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeLightbox();
 });
 
-/* ── Feedback Tabs ── */
+/* ── Feedback Tabs (legacy – kept for other pages) ── */
 function openFeedbackTab(evt, tabName) {
   const contents = document.querySelectorAll('.feedback-content');
   contents.forEach(content => content.classList.remove('active'));
@@ -149,6 +150,105 @@ function openFeedbackTab(evt, tabName) {
   evt.currentTarget.classList.add('active');
 }
 
+/* ── Feedback Carousel – Auto-sliding ── */
+document.addEventListener('DOMContentLoaded', function () {
+  const track = document.getElementById('carousel-track');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+  if (!track) return;
+
+  let currentIndex = 0;
+  let autoSlideInterval;
+
+  function getCards() {
+    return Array.from(track.children);
+  }
+
+  function getCardsPerView() {
+    const w = window.innerWidth;
+    if (w <= 600) return 1;
+    if (w <= 1024) return 2;
+    return 3;
+  }
+
+  function getMaxIndex() {
+    return Math.max(0, getCards().length - getCardsPerView());
+  }
+
+  function updateTrack() {
+    const cards = getCards();
+    if (!cards[0] || cards[0].offsetWidth === 0) return;
+    const gap = 20; // 1.25rem
+    const cardWidth = cards[0].offsetWidth + gap;
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+
+  function next() {
+    if (currentIndex >= getMaxIndex()) {
+      currentIndex = 0;
+    } else {
+      currentIndex++;
+    }
+    updateTrack();
+  }
+
+  function prev() {
+    if (currentIndex <= 0) {
+      currentIndex = getMaxIndex();
+    } else {
+      currentIndex--;
+    }
+    updateTrack();
+  }
+
+  function startAutoSlide() {
+    stopAutoSlide();
+    autoSlideInterval = setInterval(next, 3500);
+  }
+
+  function stopAutoSlide() {
+    if (autoSlideInterval) clearInterval(autoSlideInterval);
+  }
+
+  // Event listeners
+  if (prevBtn) prevBtn.addEventListener('click', () => { prev(); startAutoSlide(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { next(); startAutoSlide(); });
+
+  // Pause on hover
+  const carousel = document.getElementById('feedback-carousel');
+  if (carousel) {
+    carousel.addEventListener('mouseenter', stopAutoSlide);
+    carousel.addEventListener('mouseleave', startAutoSlide);
+  }
+
+  // Touch swipe support
+  let touchStartX = 0;
+  let touchEndX = 0;
+  if (carousel) {
+    carousel.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    carousel.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) next(); else prev();
+        startAutoSlide();
+      }
+    }, { passive: true });
+  }
+
+  // Responsive rebuild
+  window.addEventListener('resize', () => {
+    if (currentIndex > getMaxIndex()) currentIndex = getMaxIndex();
+    updateTrack();
+  });
+
+  // Init after a tiny delay to ensure CSS has applied offsetWidths
+  setTimeout(() => {
+    updateTrack();
+    startAutoSlide();
+  }, 100);
+});
+
 // ─── COOKIE BANNER ───
 document.addEventListener('DOMContentLoaded', () => {
   // Check if user already responded
@@ -159,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
     banner.className = 'cookie-banner glass-card';
     banner.innerHTML = `
       <div class="cookie-content">
-        <div class="cookie-icon">🍪</div>
+        <div class="cookie-icon"></div>
         <div class="cookie-text">
           <h4>We value your privacy</h4>
           <p>We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies.</p>
@@ -167,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
       <div class="cookie-actions">
         <button id="cookie-decline" class="btn-outline">Decline</button>
-        <button id="cookie-accept" class="btn-glow" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;"><span class="btn-icon">✦</span> Accept</button>
+        <button id="cookie-accept" class="btn-glow" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">Accept</button>
       </div>
     `;
     
@@ -192,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
     declineBtn.addEventListener('click', () => closeBanner('declined'));
   }
   
-  // ─── FEEDBACK FORM SUBMISSION ───
+  // --- FEEDBACK FORM SUBMISSION ---
   const feedbackForm = document.getElementById('feedback-form');
   if (feedbackForm) {
     feedbackForm.addEventListener('submit', (e) => {
@@ -212,5 +312,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// --- SHARE FUNCTION ---
+window.shareService = function(url, title) {
+  let fullUrl = "";
+  if (window.location.protocol === "file:") {
+    fullUrl = "https://uttarastudios.com/" + url;
+  } else {
+    const basePath = window.location.href.split('?')[0].split('#')[0].replace(/\/[^\/]*$/, '/');
+    fullUrl = basePath + url;
+  }
+
+  if (navigator.share) {
+    navigator.share({
+      title: title + ' at Uttara Studios',
+      text: `I just found this incredible healing service: ${title} by Uttara Studios. It looks profoundly transformative! Check it out and see if it resonates with you:`,
+      url: fullUrl
+    }).catch(err => console.log('Error sharing:', err));
+  } else if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(fullUrl).then(() => {
+      alert('Link copied to clipboard!\n\n' + fullUrl);
+    }).catch(err => {
+      prompt('Copy this link to share:', fullUrl);
+    });
+  } else {
+    prompt('Copy this link to share:', fullUrl);
+  }
+};
+
+// --- BOOKING FUNCTION (HIGH CONVERTING SALES MESSAGE) ---
+window.bookService = function(serviceName, price) {
+  const greeting = "Hi Uttara Studios!";
+  let customText = "";
+
+  switch(serviceName) {
+    case 'Akashic Records':
+      customText = "I am feeling deeply called to explore my soul's journey and decode my karmic patterns. I am ready to access the infinite wisdom of my Akashic Records.";
+      break;
+    case 'Reiki & Pranic Healing':
+      customText = "I am seeking deep energetic clearing and balance. I am ready to release stagnant energy and restore harmony to my mind, body, and spirit.";
+      break;
+    case 'Tarot Reading':
+      customText = "I am seeking profound clarity and guidance for my current life path. I am ready to receive the answers I need to move forward with confidence.";
+      break;
+    case 'Access Bars & Body Process':
+      customText = "I am ready to let go of limiting beliefs and mental blocks. I am looking forward to a deep release and opening myself up to new possibilities.";
+      break;
+    default:
+      customText = `I am feeling deeply called to experience the *${serviceName}* session. I am ready to step into my healing journey.`;
+  }
+
+  const body = `${customText}\n\nI would love to secure my spot.\n\n*Service:* ${serviceName}\n*Investment:* ${price}\n\nPlease let me know the next available dates and how I can complete the booking. Looking forward to this beautiful experience!`;
+  
+  const whatsappUrl = `https://wa.me/918431231056?text=${encodeURIComponent(greeting + "\n\n" + body)}`;
+  window.open(whatsappUrl, '_blank');
+};
 
 
