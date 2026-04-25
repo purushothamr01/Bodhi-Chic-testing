@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════
-   BODHI CHIC – Main Stylesheet
+   UTTARA STUDIOS – Main Stylesheet
    ══════════════════════════════════════ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -802,6 +802,134 @@ body {
   .service-price { font-size: 1.25rem; }
   .whatsapp-fab { width: 50px; height: 50px; }
   .whatsapp-fab svg { width: 24px; height: 24px; }
+}
+
+/* ── Cookie Banner ── */
+.cookie-banner {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(150%);
+  width: 90%;
+  max-width: 600px;
+  background: rgba(20, 15, 45, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 9999;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+}
+
+.cookie-banner.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.cookie-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.cookie-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.cookie-text h4 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+
+.cookie-text p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (min-width: 600px) {
+  .cookie-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+  }
+  .cookie-actions {
+    flex-shrink: 0;
+  }
+}
+
+/* ── Feedback Form ── */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.form-group label {
+  font-size: 0.85rem;
+  color: rgba(200,180,240,0.8);
+  letter-spacing: 0.05em;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(200, 180, 240, 0.2);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--lavender);
+  box-shadow: 0 0 10px rgba(180, 120, 255, 0.2);
+}
+.form-group select option {
+  background: var(--indigo);
+  color: var(--white);
 }
 
 /* ── Reduce motion for accessibility ── */
