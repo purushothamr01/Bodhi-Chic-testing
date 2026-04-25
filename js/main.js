@@ -149,4 +149,68 @@ function openFeedbackTab(evt, tabName) {
   evt.currentTarget.classList.add('active');
 }
 
+// ─── COOKIE BANNER ───
+document.addEventListener('DOMContentLoaded', () => {
+  // Check if user already responded
+  if (!localStorage.getItem('cookieConsent')) {
+    // Create banner
+    const banner = document.createElement('div');
+    banner.id = 'cookie-banner';
+    banner.className = 'cookie-banner glass-card';
+    banner.innerHTML = `
+      <div class="cookie-content">
+        <div class="cookie-icon">🍪</div>
+        <div class="cookie-text">
+          <h4>We value your privacy</h4>
+          <p>We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies.</p>
+        </div>
+      </div>
+      <div class="cookie-actions">
+        <button id="cookie-decline" class="btn-outline">Decline</button>
+        <button id="cookie-accept" class="btn-glow" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;"><span class="btn-icon">✦</span> Accept</button>
+      </div>
+    `;
+    
+    document.body.appendChild(banner);
+
+    // Show banner with delay for smooth entrance
+    setTimeout(() => {
+      banner.classList.add('show');
+    }, 1500);
+
+    // Handle Actions
+    const acceptBtn = document.getElementById('cookie-accept');
+    const declineBtn = document.getElementById('cookie-decline');
+
+    const closeBanner = (status) => {
+      localStorage.setItem('cookieConsent', status);
+      banner.classList.remove('show');
+      setTimeout(() => banner.remove(), 600);
+    };
+
+    acceptBtn.addEventListener('click', () => closeBanner('accepted'));
+    declineBtn.addEventListener('click', () => closeBanner('declined'));
+  }
+  
+  // ─── FEEDBACK FORM SUBMISSION ───
+  const feedbackForm = document.getElementById('feedback-form');
+  if (feedbackForm) {
+    feedbackForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('fb-name').value;
+      const email = document.getElementById('fb-email').value;
+      const phone = document.getElementById('fb-phone').value;
+      const product = document.getElementById('fb-product').value;
+      const message = document.getElementById('fb-message').value;
+
+      const whatsappText = `*New Feedback Submitted!*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Service:* ${encodeURIComponent(product)}%0A*Feedback:* ${encodeURIComponent(message)}`;
+      
+      const whatsappUrl = `https://wa.me/918431231056?text=${whatsappText}`;
+      window.open(whatsappUrl, '_blank');
+      
+      feedbackForm.reset();
+    });
+  }
+});
+
 
