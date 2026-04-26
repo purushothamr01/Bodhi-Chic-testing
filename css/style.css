@@ -888,6 +888,40 @@ body {
 .footer-legal a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s; }
 .footer-legal a:hover { color: var(--white); }
 
+/* Professional Designer Credit */
+.designer-credit {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.designer-credit:hover {
+  color: var(--gold-light);
+}
+
+.designer-credit span {
+  position: relative;
+}
+
+.designer-credit span::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: var(--gold-light);
+  transition: width 0.3s ease;
+}
+
+.designer-credit:hover span::after {
+  width: 100%;
+}
+
 /* Responsive Footer */
 @media (max-width: 1024px) {
   .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
@@ -1050,6 +1084,19 @@ body {
   .carousel-arrow svg { width: 14px; height: 14px; }
 }
 
+/* ── Feedback Grid for Subpages ── */
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .feedback-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
 /* Card – Premium */
 .feedback-card {
   cursor: pointer;
@@ -1186,7 +1233,7 @@ body {
 
 /* Quote strip – Premium */
 .feedback-quote {
-  padding: 1rem 1.2rem 1.2rem;
+  padding: 1.2rem 1.2rem 1.2rem;
   font-size: 0.85rem; color: rgba(200,180,240,0.85);
   line-height: 1.7; font-style: italic;
   background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.25));
@@ -1195,8 +1242,8 @@ body {
   z-index: 1;
 }
 .feedback-quote::before {
-  content: '"'; position: absolute; top: -10px; left: 12px;
-  font-family: var(--font-serif); font-size: 2.8rem; color: rgba(212,168,67,0.2);
+  content: '\201C'; position: absolute; top: 0px; left: 10px;
+  font-family: var(--font-serif); font-size: 3rem; color: rgba(212,168,67,0.15);
   line-height: 1;
 }
 .feedback-quote::after {
