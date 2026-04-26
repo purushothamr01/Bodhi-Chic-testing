@@ -295,21 +295,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- FEEDBACK FORM SUBMISSION ---
   const feedbackForm = document.getElementById('feedback-form');
   if (feedbackForm) {
-    feedbackForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('fb-name').value;
-      const email = document.getElementById('fb-email').value;
-      const phone = document.getElementById('fb-phone').value;
-      const product = document.getElementById('fb-product').value;
-      const message = document.getElementById('fb-message').value;
-
-      const whatsappText = `*New Feedback Submitted!*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Service:* ${encodeURIComponent(product)}%0A*Feedback:* ${encodeURIComponent(message)}`;
-      
-      const whatsappUrl = `https://wa.me/918431231056?text=${whatsappText}`;
-      window.open(whatsappUrl, '_blank');
-      
-      feedbackForm.reset();
-    });
+    // Form submission is now handled via HTML target="hidden_iframe" to Google Forms.
+    // The legacy WhatsApp logic has been removed to allow the direct POST.
   }
 });
 
