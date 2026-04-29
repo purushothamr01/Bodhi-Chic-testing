@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,9 +40,6 @@
     "description": "Dive into the German Kipper cards. Learn this highly specific divination system excellent for daily life, relationships, and practical matters.",
     "url": "https://uttarastudios.com/tarot-reading.html",
     "offers": {
-      "@type": "Offer",
-      "priceCurrency": "INR",
-      "price": "4000",
       "availability": "https://schema.org/InStock",
       "url": "https://uttarastudios.com/tarot-reading.html"
     }
@@ -284,6 +281,36 @@
       font-size: 0.98rem;
     }
 
+    /* ── Navbar ── */
+    .kipper-page .navbar:not(.scrolled) .nav-links a,
+    .kipper-page .navbar:not(.scrolled) .logo-text,
+    .kipper-page .navbar:not(.scrolled) .logo-symbol {
+      color: #fff !important;
+    }
+
+    .kipper-page .navbar:not(.scrolled) .nav-hamburger span {
+      background-color: #fff !important;
+    }
+
+    .kipper-page .navbar .nav-cta {
+      background: linear-gradient(135deg, #c8972a, #e8c14a, #c8972a) !important;
+      color: #3a1a00 !important;
+      font-weight: 700 !important;
+      border: none !important;
+      padding: 0.75rem 1.6rem !important;
+      border-radius: 999px !important;
+      box-shadow: 0 4px 15px rgba(200, 151, 42, 0.3) !important;
+      transition: all 0.3s ease !important;
+      text-transform: none !important;
+      font-size: 0.9rem !important;
+    }
+
+    .kipper-page .navbar .nav-cta:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 20px rgba(200, 151, 42, 0.4) !important;
+      filter: brightness(1.1) !important;
+    }
+
     /* ── CTA Band ── */
     .kipper-cta-band {
       background: #960018 !important;
@@ -419,7 +446,7 @@
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#classes">Classes</a></li>
         <li><a href="index.html#testimonials">Testimonials</a></li>
-        <li><a href="https://wa.me/918431231056" target="_blank" class="nav-cta">Book a Session</a></li>
+        <li><a href="https://wa.me/918431231056" target="_blank" class="nav-cta">✦ Book a Session</a></li>
       </ul>
       <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -430,7 +457,7 @@
       <a href="index.html#services">Services</a>
       <a href="index.html#classes">Classes</a>
       <a href="index.html#testimonials">Testimonials</a>
-      <a href="https://wa.me/918431231056" target="_blank">Book a Session</a>
+      <a href="https://wa.me/918431231056" target="_blank" class="nav-cta">✦ Book a Session</a>
     </div>
   </nav>
 
@@ -469,7 +496,7 @@
       <div class="kipper-details-grid">
         <div style="position:relative; align-self:flex-start; padding-bottom:2.5rem;">
           <div class="kipper-details-img" style="background:#fdfaf8;">
-            <img src="images/class/kipper-cl-png" alt="Kipper Reading"
+            <img src="images/class/kipper-cl-.png" alt="Kipper Reading"
               style="width:100%; max-height:520px; object-fit:cover; display:block;" />
           </div>
           <div
@@ -502,7 +529,7 @@
           </div>
           <p style="color:rgba(51,51,51,0.75); font-size:1.05rem; line-height:1.9; margin:0;">
             Kipper is the "Sister" of Lenormand, but with a focus on people and situations. While other decks might be
-            abstract, Kipper is cinematic. It shows you the actors in your life—the boss, the lover, the false person,
+            abstract, Kipper is cinematic. It shows you the actors in your life the boss, the lover, the false person,
             the unexpected money. It is the most talkative and situational deck in existence.
           </p>
           <p style="color:rgba(51,51,51,0.75); font-size:1.05rem; line-height:1.9; margin:0;">
@@ -586,6 +613,18 @@
             professional integrity.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CLIENT FEEDBACK -->
+  <section class="feedback-section section-pad" id="feedback" style="background:#fff; padding: 7rem 0;">
+    <div class="container">
+      <div class="kipper-section-label" style="text-align:center;">✦ Real Conversations</div>
+      <h2 class="kipper-section-title" style="text-align:center;">Client <em>Feedback</em></h2>
+      <p
+        style="text-align:center; font-style:italic; color:rgba(51,51,51,0.6); margin-top:3rem; font-size:1.1rem; padding-bottom: 2rem;">
+        ✦ New feedbacks will be updated soon. ✦
+      </p>
     </div>
   </section>
 
