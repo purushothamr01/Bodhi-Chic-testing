@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kipper – Uttara Studios</title>
+  <meta name="description"
+    content="Dive into the German Kipper cards. Learn this highly specific divination system excellent for daily life, relationships, and practical matters." />
+  <meta name="keywords" content="Tarot Reading, Online Tarot, Card Reading, Spiritual Guidance, Uttara Studios" />
+  <link rel="canonical" href="https://uttarastudios.com/tarot-reading.html" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://uttarastudios.com/tarot-reading.html" />
+  <meta property="og:title" content="Kipper – Uttara Studios" />
+  <meta property="og:description"
+    content="Dive into the German Kipper cards. Learn this highly specific divination system excellent for daily life, relationships, and practical matters." />
+  <meta property="og:image" content="https://uttarastudios.com/images/service-tarot.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://uttarastudios.com/tarot-reading.html" />
+  <meta property="twitter:title" content="Kipper – Uttara Studios" />
+  <meta property="twitter:description"
+    content="Dive into the German Kipper cards. Learn this highly specific divination system excellent for daily life, relationships, and practical matters." />
+  <meta property="twitter:image" content="https://uttarastudios.com/images/service-tarot.png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Kipper",
+    "provider": {
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Uttara Studios",
+      "image": "https://uttarastudios.com/images/founder.png"
+    },
+    "description": "Dive into the German Kipper cards. Learn this highly specific divination system excellent for daily life, relationships, and practical matters.",
+    "url": "https://uttarastudios.com/tarot-reading.html",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": "4000",
+      "availability": "https://schema.org/InStock",
+      "url": "https://uttarastudios.com/tarot-reading.html"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/about.css" />
+  <style>
+    .kipper-page {
+      background: #fff !important;
+    }
+
+    .kipper-page a {
+      text-decoration: none !important;
+    }
+
+    /* ── Hero ── */
+    .kipper-hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #960018, #DC143C, #CD5C5C, #FF0000, #960018) !important;
+      background-size: 400% 400% !important;
+      animation: kipperBg 15s ease infinite !important;
+      position: relative;
+      overflow: hidden;
+      padding: 8rem 0 6rem;
+    }
+
+    @keyframes kipperBg {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .kipper-hero-inner {
+      width: 90%;
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .kipper-hero-badge {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 999px;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .kipper-hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      color: #fff !important;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 2rem;
+    }
+
+    .kipper-hero-title em {
+      font-style: italic;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .kipper-hero-sub {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9) !important;
+      max-width: 600px;
+      margin-bottom: 3.5rem;
+    }
+
+    .kipper-hero-stats {
+      display: flex;
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .kipper-stat-num {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: #fff !important;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .kipper-stat-label {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.7) !important;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+    }
+
+    .kipper-hero-img {
+      position: relative;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.4) !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .kipper-hero-img:hover {
+      transform: translateY(-10px) rotate(1deg);
+    }
+
+    .kipper-hero-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .kipper-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #c8972a, #e8c14a, #c8972a) !important;
+      color: #3a1a00 !important;
+      padding: 1.15rem 2.4rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.98rem;
+      letter-spacing: 0.05em;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3) !important;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .kipper-cta-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    /* ── Details ── */
+    .kipper-details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .kipper-details-img {
+      position: relative;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 30px 70px rgba(150, 0, 24, 0.1);
+      border: 1px solid rgba(150, 0, 24, 0.1);
+    }
+
+    .kipper-section-label {
+      display: block;
+      font-size: 0.82rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #DC143C !important;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    .kipper-section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      color: #333 !important;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .kipper-section-title em {
+      color: #DC143C !important;
+      font-style: italic;
+    }
+
+    /* ── Learn ── */
+    .kipper-learn {
+      background: #fdfaf8 !important;
+      padding: 7rem 0 !important;
+    }
+
+    .kipper-learn-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .kipper-learn-card {
+      background: #fff !important;
+      border: 1px solid rgba(150, 0, 24, 0.05) !important;
+      border-top: 5px solid #960018 !important;
+      padding: 3rem 2.5rem;
+      border-radius: 20px;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 30px rgba(150, 0, 24, 0.03);
+    }
+
+    .kipper-learn-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(150, 0, 24, 0.08);
+      border-color: #CD5C5C !important;
+    }
+
+    .kipper-learn-title {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      color: #960018 !important;
+      margin-bottom: 1rem;
+    }
+
+    .kipper-learn-desc {
+      color: rgba(51, 51, 51, 0.7);
+      line-height: 1.7;
+      font-size: 0.98rem;
+    }
+
+    /* ── Navbar ── */
+    .kipper-page .navbar:not(.scrolled) .nav-links a,
+    .kipper-page .navbar:not(.scrolled) .logo-text,
+    .kipper-page .navbar:not(.scrolled) .logo-symbol {
+      color: #fff !important;
+    }
+
+    .kipper-page .navbar:not(.scrolled) .nav-hamburger span {
+      background-color: #fff !important;
+    }
+
+    .kipper-page .navbar .nav-cta {
+      background: linear-gradient(135deg, #c8972a, #e8c14a, #c8972a) !important;
+      color: #3a1a00 !important;
+      font-weight: 700 !important;
+      border: none !important;
+      padding: 0.75rem 1.6rem !important;
+      border-radius: 999px !important;
+      box-shadow: 0 4px 15px rgba(200, 151, 42, 0.3) !important;
+      transition: all 0.3s ease !important;
+      text-transform: none !important;
+      font-size: 0.9rem !important;
+    }
+
+    .kipper-page .navbar .nav-cta:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 20px rgba(200, 151, 42, 0.4) !important;
+      filter: brightness(1.1) !important;
+    }
+
+    /* ── CTA Band ── */
+    .kipper-cta-band {
+      background: #960018 !important;
+      padding: 7rem 0 !important;
+      text-align: center !important;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kipper-cta-band h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      color: #fff !important;
+      margin-bottom: 1.5rem;
+    }
+
+    .kipper-cta-band p {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.8) !important;
+      margin-bottom: 3.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── Footer Overrides ── */
+    .kipper-page .footer {
+      background: #1a0004 !important;
+      color: #fff !important;
+    }
+
+    .kipper-page .footer-title {
+      color: #CD5C5C !important;
+    }
+
+    .kipper-page .footer-nav a:hover {
+      color: #FF0000 !important;
+    }
+
+    .kipper-page .footer-divider {
+      background: rgba(205, 92, 92, 0.15) !important;
+    }
+
+    .kipper-page .footer-form button {
+      background: #CD5C5C !important;
+      color: #fff !important;
+    }
+
+    .kipper-page .footer-social-icons {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .kipper-page .footer-social-icons a {
+      color: rgba(255, 255, 255, 0.7) !important;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .kipper-page .footer-social-icons a:hover {
+      color: #3a1a00 !important;
+      background: #c8972a !important;
+      border-color: #c8972a !important;
+      transform: translateY(-3px);
+    }
+
+    .kipper-page .whatsapp-fab {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
+
+    .kipper-page .whatsapp-fab:hover {
+      transform: scale(1.1);
+      box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+    }
+
+    .kipper-page .fab-pulse {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #25D366;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: fabPulse 2s infinite;
+      z-index: -1;
+    }
+
+    @keyframes fabPulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.6;
+      }
+
+      100% {
+        transform: scale(1.6);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="kipper-page">
+
+  <!-- ─── NAVBAR ─── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="../../../index.html" class="nav-logo">
+        <span class="logo-symbol">✦</span>
+        <span class="logo-text">Uttara Studios</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../other/about.html">About</a></li>
+        <li><a href="../../../index.html#services">Services</a></li>
+        <li><a href="../../../index.html#classes">Classes</a></li>
+        <li><a href="../../../index.html#testimonials">Testimonials</a></li>
+        <li><a href="https://wa.me/918431231056" target="_blank" class="nav-cta">✦ Book a Session</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="../other/about.html">About</a>
+      <a href="../../../index.html#services">Services</a>
+      <a href="../../../index.html#classes">Classes</a>
+      <a href="../../../index.html#testimonials">Testimonials</a>
+      <a href="https://wa.me/918431231056" target="_blank" class="nav-cta">✦ Book a Session</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="kipper-hero">
+    <div class="kipper-hero-inner">
+      <div class="kipper-hero-text">
+        <div class="kipper-hero-badge">✦ 🇩🇪 German Divination ✦</div>
+        <h1 class="kipper-hero-title">Kipper<br /><em>Mastery</em></h1>
+        <p class="kipper-hero-sub">Master the 36-card German Kipper deck. The ultimate system for understanding people,
+          relationships, and the practical events of daily life with surgical precision.</p>
+        <div class="kipper-hero-stats">
+          <div class="kipper-stat-item">
+            <span class="kipper-stat-num">36</span>
+            <span class="kipper-stat-label">Traditional Cards</span>
+          </div>
+          <div class="kipper-stat-item">
+            <span class="kipper-stat-num">Live</span>
+            <span class="kipper-stat-label">Online Batch</span>
+          </div>
+        </div>
+        <a href="https://wa.me/918431231056?text=Hi%20Uttara%20Studios%2C%20I%20would%20like%20to%20enroll%20in%20the%20Kipper%20Class."
+          target="_blank" class="kipper-cta-btn" id="hero-enroll-btn">
+          ✦ Book on WhatsApp
+        </a>
+      </div>
+      <div class="kipper-hero-img">
+        <img src="../../images/class/kipper-cl-.png" alt="Kipper Class – Uttara Studios" />
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section class="kipper-details" style="padding: 7rem 0;">
+    <div class="container">
+      <div class="kipper-details-grid">
+        <div style="position:relative; align-self:flex-start; padding-bottom:2.5rem;">
+          <div class="kipper-details-img" style="background:#fdfaf8;">
+            <img src="../../images/class/kipper-cl-.png" alt="Kipper Reading"
+              style="width:100%; max-height:520px; object-fit:cover; display:block;" />
+          </div>
+          <div
+            style="position:absolute; bottom:0; left:50%; transform:translateX(-50%); display:flex; gap:0.75rem; white-space:nowrap; z-index:2;">
+            <div
+              style="background:#fff; border:1px solid rgba(150,0,24,0.1); border-radius:16px; padding:0.7rem 1.3rem; text-align:center; box-shadow:0 8px 28px rgba(150,0,24,0.08);">
+              <span
+                style="display:block; font-family:var(--font-serif); font-size:1rem; color:#960018; font-weight:700;">36
+                Cards</span>
+              <span
+                style="display:block; font-size:0.62rem; color:rgba(51,51,51,0.5); letter-spacing:0.12em; text-transform:uppercase; margin-top:3px;">German
+                System</span>
+            </div>
+            <div
+              style="background:#fff; border:1px solid rgba(150,0,24,0.1); border-radius:16px; padding:0.7rem 1.3rem; text-align:center; box-shadow:0 8px 28px rgba(150,0,24,0.08);">
+              <span
+                style="display:block; font-family:var(--font-serif); font-size:1rem; color:#960018; font-weight:700;">✦
+                Certified</span>
+              <span
+                style="display:block; font-size:0.62rem; color:rgba(51,51,51,0.5); letter-spacing:0.12em; text-transform:uppercase; margin-top:3px;">On
+                Completion</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; justify-content:center; gap:1.5rem;">
+          <div>
+            <div class="kipper-section-label">✦ Practical Divination</div>
+            <h2 class="kipper-section-title">Why <em>Kipper?</em></h2>
+          </div>
+          <p style="color:rgba(51,51,51,0.75); font-size:1.05rem; line-height:1.9; margin:0;">
+            Kipper is the "Sister" of Lenormand, but with a focus on people and situations. While other decks might be
+            abstract, Kipper is cinematic. It shows you the actors in your life the boss, the lover, the false person,
+            the unexpected money. It is the most talkative and situational deck in existence.
+          </p>
+          <p style="color:rgba(51,51,51,0.75); font-size:1.05rem; line-height:1.9; margin:0;">
+            In this class, you will learn to read Kipper cards as a narrative. You'll understand how cards "look" at
+            each other, creating a dynamic map of your life's current path.
+          </p>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-top:1rem;">
+            <div
+              style="background:#fff; border:1px solid rgba(150,0,24,0.1); border-radius:14px; padding:1rem; box-shadow:0 4px 16px rgba(150,0,24,0.05);">
+              <span
+                style="display:block; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.12em; color:#DC143C; font-weight:700; margin-bottom:0.3rem;">Format</span>
+              <span style="font-family:var(--font-serif); font-size:1rem; color:#333; font-weight:700;">Live
+                Online</span>
+            </div>
+            <div
+              style="background:#fff; border:1px solid rgba(150,0,24,0.1); border-radius:14px; padding:1rem; box-shadow:0 4px 16px rgba(150,0,24,0.05);">
+              <span
+                style="display:block; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.12em; color:#DC143C; font-weight:700; margin-bottom:0.3rem;">Certification</span>
+              <span style="font-family:var(--font-serif); font-size:1rem; color:#333; font-weight:700;">Yes
+                Included</span>
+            </div>
+            <div
+              style="background:#fff; border:1px solid rgba(150,0,24,0.1); border-radius:14px; padding:1rem; box-shadow:0 4px 16px rgba(150,0,24,0.05);">
+              <span
+                style="display:block; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.12em; color:#DC143C; font-weight:700; margin-bottom:0.3rem;">Language</span>
+              <span style="font-family:var(--font-serif); font-size:1rem; color:#333; font-weight:700;">English &
+                Hindi</span>
+            </div>
+            <div
+              style="background:#fff; border:1px solid rgba(150,0,24,0.1); border-radius:14px; padding:1rem; box-shadow:0 4px 16px rgba(150,0,24,0.05);">
+              <span
+                style="display:block; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.12em; color:#DC143C; font-weight:700; margin-bottom:0.3rem;">Level</span>
+              <span style="font-family:var(--font-serif); font-size:1rem; color:#333; font-weight:700;">Beginner to
+                Master</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section class="kipper-learn" id="curriculum">
+    <div class="container">
+      <div class="kipper-section-label" style="text-align:center;">✦ Course Curriculum</div>
+      <h2 class="kipper-section-title" style="text-align:center;">What You Will <em>Learn</em></h2>
+      <p
+        style="text-align:center; color:rgba(51,51,51,0.6); max-width:640px; margin:0.5rem auto 3rem; font-size:1.05rem; line-height:1.8;">
+        A step-by-step masterclass in situational and predictive reading.</p>
+
+      <div class="kipper-learn-grid">
+        <div class="kipper-learn-card">
+          <h4 class="kipper-learn-title">The 36 Personas</h4>
+          <p class="kipper-learn-desc">Understanding the core meanings of the 36 cards, with a special focus on the
+            "People" cards and their roles.</p>
+        </div>
+        <div class="kipper-learn-card">
+          <h4 class="kipper-learn-title">Directional Cues</h4>
+          <p class="kipper-learn-desc">Learn the unique German method of directional reading—how where a person looks
+            changes the entire meaning.</p>
+        </div>
+        <div class="kipper-learn-card">
+          <h4 class="kipper-learn-title">Situational Analysis</h4>
+          <p class="kipper-learn-desc">Mastering daily life spreads. How to see specific events like travel, work
+            meetings, and financial surprises.</p>
+        </div>
+        <div class="kipper-learn-card">
+          <h4 class="kipper-learn-title">Relationship Mapping</h4>
+          <p class="kipper-learn-desc">Using Kipper to decode complex relationship dynamics. Who is influencing whom and
+            what is the outcome?</p>
+        </div>
+        <div class="kipper-learn-card">
+          <h4 class="kipper-learn-title">The Grand Spread</h4>
+          <p class="kipper-learn-desc">Mastering large layouts for comprehensive life overviews. Connecting the past and
+            future threads seamlessly.</p>
+        </div>
+        <div class="kipper-learn-card">
+          <h4 class="kipper-learn-title">Professional Ethics</h4>
+          <p class="kipper-learn-desc">How to deliver precise, situational readings with compassion, clarity, and
+            professional integrity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT FEEDBACK -->
+  <section class="feedback-section section-pad" id="feedback" style="background:#fff; padding: 7rem 0;">
+    <div class="container">
+      <div class="kipper-section-label" style="text-align:center;">✦ Real Conversations</div>
+      <h2 class="kipper-section-title" style="text-align:center;">Client <em>Feedback</em></h2>
+      <p
+        style="text-align:center; font-style:italic; color:rgba(51,51,51,0.6); margin-top:3rem; font-size:1.1rem; padding-bottom: 2rem;">
+        ✦ New feedbacks will be updated soon. ✦
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="kipper-cta-band">
+    <div class="container" style="position:relative; z-index:1;">
+      <h2>Ready to Master <em>Situational Divination?</em></h2>
+      <p>Join our upcoming batch and learn to see life with clarity and precision.</p>
+      <a href="https://wa.me/918431231056?text=Hi%20Uttara%20Studios%2C%20I%20would%20like%20to%20enroll%20in%20the%20Kipper%20Class."
+        target="_blank" class="kipper-cta-btn">
+        ✦ Book on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="footer-top-glow"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../../../index.html" class="footer-logo">
+            <span class="logo-symbol">✦</span>
+            <span class="logo-text">Uttara Studios</span>
+          </a>
+          <p class="footer-desc">Elevating your spiritual journey through profound intuitive guidance and transformative
+            energy healing.</p>
+        </div>
+        <div class="footer-newsletter">
+          <h4 class="footer-title">Join the Inner Circle</h4>
+          <p>Receive exclusive spiritual insights and healing practices.</p>
+          <form class="footer-form">
+            <input type="email" placeholder="Enter your email address" required />
+            <button type="submit" aria-label="Subscribe">✦</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-nav">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../other/about.html">About Us</a></li>
+            <li><a href="../../../index.html#services">Services</a></li>
+            <li><a href="../../../index.html#feedback">Client Stories</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Offerings</h4>
+          <ul class="footer-nav">
+            <li><a href="../Pro/akashic-records.html">Akashic Records</a></li>
+            <li><a href="../Pro/reiki-healing.html">Reiki Healing</a></li>
+            <li><a href="../Pro/tarot-reading.html">Tarot Reading</a></li>
+            <li><a href="../Pro/access-bars.html">Access Bars</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Online Classes</h4>
+          <ul class="footer-nav">
+            <li><a href="class-reiki.html">Reiki Class</a></li>
+            <li><a href="class-tarot.html">Tarot Mastery</a></li>
+            <li><a href="class-akashic.html">Akashic Records</a></li>
+            <li><a href="class-lenormand.html">Lenormand Mastery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-nav">
+            <li><a href="mailto:connect@uttarastudios.com">connect@uttarastudios.com</a></li>
+            <li><a href="tel:+918431231056">+91 84312 31056</a></li>
+            <li>Online Sessions Available</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Connect</h4>
+          <div class="footer-social-icons">
+            <a href="https://instagram.com/ascended_conciousness" target="_blank" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://wa.me/918431231056" target="_blank" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Uttara Studios. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="../other/privacy-policy.html">Privacy Policy</a>
+          <a href="../other/terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/918431231056" target="_blank" class="whatsapp-fab" id="whatsapp-fab"
+    aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+    <span class="fab-pulse"></span>
+  </a>
+
+  <script src="../../js/main.js"></script>
+</body>
+
+</html>
