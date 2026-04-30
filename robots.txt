@@ -1,0 +1,15 @@
+# Uttara Studios Robots.txt
+# Optimized for SEO and UX
+
+User-agent: *
+Allow: /
+Allow: /assets/html/
+Allow: /assets/images/
+Disallow: /assets/css/
+Disallow: /assets/js/
+
+# Host
+Host: https://uttarastudios.com
+
+# Sitemaps
+Sitemap: https://uttarastudios.com/sitemap.xml
