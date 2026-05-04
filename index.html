@@ -126,7 +126,7 @@
   </script>
 </head>
 
-<body>
+<body class="skeletons-loading">
 
   <!-- Particle Canvas Background -->
   <canvas id="particles-canvas"></canvas>
@@ -185,6 +185,7 @@
         <li><a href="assets/html/other/about.html" class="nav-link-item">About</a></li>
         <li><a href="#services" class="nav-link-item">Services</a></li>
         <li><a href="#classes" class="nav-link-item">Classes</a></li>
+        <li><a href="assets/html/other/blog.html" class="nav-link-item">Blog</a></li>
         <li><a href="#feedback" class="nav-link-item">Testimonials</a></li>
       </ul>
 
@@ -220,6 +221,7 @@
           <a href="assets/html/other/about.html">About</a>
           <a href="#services">Services</a>
           <a href="#classes">Classes</a>
+          <a href="assets/html/other/blog.html">Blog</a>
           <a href="index.html#feedback">Testimonials</a>
           <a href="https://wa.me/918431231056" target="_blank" class="mobile-cta-btn">✦ Book a Session</a>
         </div>
@@ -328,6 +330,60 @@
         <h2 class="section-title" style="text-align:center">Choose Your<br /><em>Path to Healing</em></h2>
         <p class="feedback-subtitle">Every modality is a doorway choose the one that calls to your soul.</p>
 
+        <!-- ── Services Skeleton ── -->
+        <div class="skeleton-wrap services-skeleton" aria-hidden="true">
+          <!-- Repeated 4 times to match real card count -->
+          <div class="skeleton-service-card">
+            <div class="skeleton-service-img skeleton-block"></div>
+            <div class="skeleton-service-body">
+              <div class="skeleton-badge skeleton-block"></div>
+              <div class="skeleton-title skeleton-block"></div>
+              <div class="skeleton-desc-1 skeleton-block"></div>
+              <div class="skeleton-desc-2 skeleton-block"></div>
+              <div class="skeleton-footer">
+                <div class="skeleton-btn skeleton-block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skeleton-service-card">
+            <div class="skeleton-service-img skeleton-block"></div>
+            <div class="skeleton-service-body">
+              <div class="skeleton-badge skeleton-block"></div>
+              <div class="skeleton-title skeleton-block"></div>
+              <div class="skeleton-desc-1 skeleton-block"></div>
+              <div class="skeleton-desc-2 skeleton-block"></div>
+              <div class="skeleton-footer">
+                <div class="skeleton-btn skeleton-block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skeleton-service-card">
+            <div class="skeleton-service-img skeleton-block"></div>
+            <div class="skeleton-service-body">
+              <div class="skeleton-badge skeleton-block"></div>
+              <div class="skeleton-title skeleton-block"></div>
+              <div class="skeleton-desc-1 skeleton-block"></div>
+              <div class="skeleton-desc-2 skeleton-block"></div>
+              <div class="skeleton-footer">
+                <div class="skeleton-btn skeleton-block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skeleton-service-card">
+            <div class="skeleton-service-img skeleton-block"></div>
+            <div class="skeleton-service-body">
+              <div class="skeleton-badge skeleton-block"></div>
+              <div class="skeleton-title skeleton-block"></div>
+              <div class="skeleton-desc-1 skeleton-block"></div>
+              <div class="skeleton-desc-2 skeleton-block"></div>
+              <div class="skeleton-footer">
+                <div class="skeleton-btn skeleton-block"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="real-content">
         <div class="premium-services-grid">
 
           <!-- Akashic Records -->
@@ -354,15 +410,13 @@
               <p class="premium-card-desc">Decode karmic patterns & access the infinite library of your soul's journey
                 across lifetimes.</p>
               <div class="premium-card-footer">
-                <div class="premium-price-wrap">
-                  <span class="premium-price-label">Starting from</span>
-                  <span class="premium-price">₹5,555</span>
-                </div>
-                <div style="display: flex; gap: 0.5rem;">
+                <div style="display: flex; gap: 0.5rem; justify-content: center; width: 100%;">
                   <a href="assets/html/Pro/akashic-records.html" class="premium-cta-btn"
                     style="background: rgba(139,0,21,0.05); border: 1.5px solid rgba(139,0,21,0.25); color: #6a0010;">Details</a>
-                  <button onclick="bookService('Akashic Records', '₹5,555')" class="premium-cta-btn"
-                    style="cursor: pointer;">Book <span>→</span></button>
+                  <button onclick="bookService('Akashic Records')" class="premium-cta-btn"
+                    id="akashic-cta-btn">
+                    <span>✦ Book Session</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -392,15 +446,13 @@
               <p class="premium-card-desc">Restore harmony across your physical, emotional, relational &amp; financial
                 energy body.</p>
               <div class="premium-card-footer">
-                <div class="premium-price-wrap">
-                  <span class="premium-price-label">Starting from</span>
-                  <span class="premium-price">₹1,500</span>
-                </div>
-                <div style="display: flex; gap: 0.5rem;">
+                <div style="display: flex; gap: 0.5rem; justify-content: center; width: 100%;">
                   <a href="assets/html/Pro/reiki-healing.html" class="premium-cta-btn"
                     style="background: rgba(139,0,21,0.05); border: 1.5px solid rgba(139,0,21,0.25); color: #6a0010;">Details</a>
-                  <button onclick="bookService('Reiki & Pranic Healing', '₹1,500')" class="premium-cta-btn"
-                    style="cursor: pointer;">Book <span>→</span></button>
+                  <button onclick="bookService('Reiki & Pranic Healing')" class="premium-cta-btn"
+                    id="reiki-cta-btn">
+                    <span>✦ Book Session</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -431,15 +483,13 @@
                 energy
                 and next steps.</p>
               <div class="premium-card-footer">
-                <div class="premium-price-wrap">
-                  <span class="premium-price-label">Starting from</span>
-                  <span class="premium-price">₹4,000</span>
-                </div>
-                <div style="display: flex; gap: 0.5rem;">
+                <div style="display: flex; gap: 0.5rem; justify-content: center; width: 100%;">
                   <a href="assets/html/Pro/tarot-reading.html" class="premium-cta-btn"
                     style="background: rgba(139,0,21,0.05); border: 1.5px solid rgba(139,0,21,0.25); color: #6a0010;">Details</a>
-                  <button onclick="bookService('Tarot Reading', '₹4,000')" class="premium-cta-btn"
-                    style="cursor: pointer;">Book <span>→</span></button>
+                  <button onclick="bookService('Tarot Reading')" class="premium-cta-btn"
+                    id="tarot-cta-btn">
+                    <span>✦ Book Session</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -469,21 +519,20 @@
               <p class="premium-card-desc">Release limiting beliefs from 32 head points. Reset your neural pathways to
                 infinite possibility.</p>
               <div class="premium-card-footer">
-                <div class="premium-price-wrap">
-                  <span class="premium-price-label">Starting from</span>
-                  <span class="premium-price">₹3,333</span>
-                </div>
-                <div style="display: flex; gap: 0.5rem;">
+                <div style="display: flex; gap: 0.5rem; justify-content: center; width: 100%;">
                   <a href="assets/html/Pro/access-bars.html" class="premium-cta-btn"
                     style="background: rgba(139,0,21,0.05); border: 1.5px solid rgba(139,0,21,0.25); color: #6a0010;">Details</a>
-                  <button onclick="bookService('Access Bars & Body Process', '₹3,333')" class="premium-cta-btn"
-                    style="cursor: pointer;">Book <span>→</span></button>
+                  <button onclick="bookService('Access Bars & Body Process')" class="premium-cta-btn"
+                    id="access-cta-btn">
+                    <span>✦ Book Session</span>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
 
         </div>
+        </div><!-- /.services real-content -->
       </div>
     </section>
 
@@ -514,6 +563,132 @@
           </div>
         </div>
 
+        <!-- ── Courses Skeleton ── -->
+        <div class="skeleton-wrap courses-skeleton" aria-hidden="true">
+          <!-- 6 skeleton course cards -->
+          <div class="skeleton-course-card">
+            <div class="skeleton-course-img skeleton-block"></div>
+            <div class="skeleton-course-body">
+              <div class="skeleton-course-title skeleton-block"></div>
+              <div class="skeleton-course-author skeleton-block"></div>
+              <div class="skeleton-course-rating">
+                <div class="skeleton-rating-num skeleton-block"></div>
+                <div class="skeleton-rating-stars skeleton-block"></div>
+                <div class="skeleton-rating-count skeleton-block"></div>
+              </div>
+              <div class="skeleton-course-badges">
+                <div class="skeleton-badge-pill skeleton-block"></div>
+                <div class="skeleton-badge-pill skeleton-block"></div>
+              </div>
+              <div class="skeleton-course-footer">
+                <div class="skeleton-buy-btn skeleton-block"></div>
+                <div class="skeleton-share-btn skeleton-block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skeleton-course-card">
+            <div class="skeleton-course-img skeleton-block"></div>
+            <div class="skeleton-course-body">
+              <div class="skeleton-course-title skeleton-block"></div>
+              <div class="skeleton-course-author skeleton-block"></div>
+              <div class="skeleton-course-rating">
+                <div class="skeleton-rating-num skeleton-block"></div>
+                <div class="skeleton-rating-stars skeleton-block"></div>
+                <div class="skeleton-rating-count skeleton-block"></div>
+              </div>
+              <div class="skeleton-course-badges">
+                <div class="skeleton-badge-pill skeleton-block"></div>
+                <div class="skeleton-badge-pill skeleton-block"></div>
+              </div>
+              <div class="skeleton-course-footer">
+                <div class="skeleton-buy-btn skeleton-block"></div>
+                <div class="skeleton-share-btn skeleton-block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skeleton-course-card">
+            <div class="skeleton-course-img skeleton-block"></div>
+            <div class="skeleton-course-body">
+              <div class="skeleton-course-title skeleton-block"></div>
+              <div class="skeleton-course-author skeleton-block"></div>
+              <div class="skeleton-course-rating">
+                <div class="skeleton-rating-num skeleton-block"></div>
+                <div class="skeleton-rating-stars skeleton-block"></div>
+                <div class="skeleton-rating-count skeleton-block"></div>
+              </div>
+              <div class="skeleton-course-badges">
+                <div class="skeleton-badge-pill skeleton-block"></div>
+                <div class="skeleton-badge-pill skeleton-block"></div>
+              </div>
+              <div class="skeleton-course-footer">
+                <div class="skeleton-buy-btn skeleton-block"></div>
+                <div class="skeleton-share-btn skeleton-block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skeleton-course-card">
+            <div class="skeleton-course-img skeleton-block"></div>
+            <div class="skeleton-course-body">
+              <div class="skeleton-course-title skeleton-block"></div>
+              <div class="skeleton-course-author skeleton-block"></div>
+              <div class="skeleton-course-rating">
+                <div class="skeleton-rating-num skeleton-block"></div>
+                <div class="skeleton-rating-stars skeleton-block"></div>
+                <div class="skeleton-rating-count skeleton-block"></div>
+              </div>
+              <div class="skeleton-course-badges">
+                <div class="skeleton-badge-pill skeleton-block"></div>
+                <div class="skeleton-badge-pill skeleton-block"></div>
+              </div>
+              <div class="skeleton-course-footer">
+                <div class="skeleton-buy-btn skeleton-block"></div>
+                <div class="skeleton-share-btn skeleton-block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skeleton-course-card">
+            <div class="skeleton-course-img skeleton-block"></div>
+            <div class="skeleton-course-body">
+              <div class="skeleton-course-title skeleton-block"></div>
+              <div class="skeleton-course-author skeleton-block"></div>
+              <div class="skeleton-course-rating">
+                <div class="skeleton-rating-num skeleton-block"></div>
+                <div class="skeleton-rating-stars skeleton-block"></div>
+                <div class="skeleton-rating-count skeleton-block"></div>
+              </div>
+              <div class="skeleton-course-badges">
+                <div class="skeleton-badge-pill skeleton-block"></div>
+                <div class="skeleton-badge-pill skeleton-block"></div>
+              </div>
+              <div class="skeleton-course-footer">
+                <div class="skeleton-buy-btn skeleton-block"></div>
+                <div class="skeleton-share-btn skeleton-block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skeleton-course-card">
+            <div class="skeleton-course-img skeleton-block"></div>
+            <div class="skeleton-course-body">
+              <div class="skeleton-course-title skeleton-block"></div>
+              <div class="skeleton-course-author skeleton-block"></div>
+              <div class="skeleton-course-rating">
+                <div class="skeleton-rating-num skeleton-block"></div>
+                <div class="skeleton-rating-stars skeleton-block"></div>
+                <div class="skeleton-rating-count skeleton-block"></div>
+              </div>
+              <div class="skeleton-course-badges">
+                <div class="skeleton-badge-pill skeleton-block"></div>
+                <div class="skeleton-badge-pill skeleton-block"></div>
+              </div>
+              <div class="skeleton-course-footer">
+                <div class="skeleton-buy-btn skeleton-block"></div>
+                <div class="skeleton-share-btn skeleton-block"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="real-content">
         <div class="classes-grid">
           <a href="assets/html/class/class-reiki.html" class="course-card-link">
             <div class="course-card">
@@ -1146,6 +1321,7 @@
             </div>
           </a>
         </div>
+        </div><!-- /.real-content -->
 
 
         <div class="feedback-cta" style="margin-top: 3.5rem;">
@@ -1219,6 +1395,31 @@
         </div>
 
         <!-- Auto-sliding Feedback Carousel -->
+        <!-- ── Feedback Skeleton ── -->
+        <div class="skeleton-wrap feedback-skeleton" aria-hidden="true">
+          <div class="skeleton-feedback-card">
+            <div class="skeleton-wa-header skeleton-block"></div>
+            <div class="skeleton-feedback-img skeleton-block"></div>
+            <div class="skeleton-feedback-quote skeleton-block"></div>
+          </div>
+          <div class="skeleton-feedback-card">
+            <div class="skeleton-wa-header skeleton-block"></div>
+            <div class="skeleton-feedback-img skeleton-block"></div>
+            <div class="skeleton-feedback-quote skeleton-block"></div>
+          </div>
+          <div class="skeleton-feedback-card">
+            <div class="skeleton-wa-header skeleton-block"></div>
+            <div class="skeleton-feedback-img skeleton-block"></div>
+            <div class="skeleton-feedback-quote skeleton-block"></div>
+          </div>
+          <div class="skeleton-feedback-card">
+            <div class="skeleton-wa-header skeleton-block"></div>
+            <div class="skeleton-feedback-img skeleton-block"></div>
+            <div class="skeleton-feedback-quote skeleton-block"></div>
+          </div>
+        </div>
+
+        <div class="real-content">
         <div class="feedback-carousel" id="feedback-carousel">
           <button class="carousel-arrow carousel-prev" id="carousel-prev" aria-label="Previous">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -1437,6 +1638,7 @@
             </svg>
           </button>
         </div>
+        </div><!-- /.feedback real-content -->
 
         <div class="feedback-cta" style="gap: 1rem; flex-wrap: wrap;">
           <a href="https://wa.me/918431231056" target="_blank" class="btn-glow" id="feedback-book-btn">
@@ -1827,6 +2029,40 @@
   </a>
 
   <script src="assets/js/main.js"></script>
+
+  <!-- ── Skeleton Screen Reveal ── -->
+  <script>
+    (function () {
+      function revealSkeletons() {
+        var body = document.body;
+        // Collect real content wrappers
+        var realPanels = document.querySelectorAll('.real-content');
+        var skeletons  = document.querySelectorAll('.skeleton-wrap');
+
+        // Remove loading class so CSS switches skeleton→real
+        body.classList.remove('skeletons-loading');
+
+        // Add fade-in animation to each real panel
+        realPanels.forEach(function (panel) {
+          panel.classList.add('skeleton-revealed');
+        });
+
+        // Remove skeleton nodes from DOM after animation
+        skeletons.forEach(function (sk) {
+          setTimeout(function () { sk.remove(); }, 700);
+        });
+      }
+
+      // Fire on full page load (images included)
+      if (document.readyState === 'complete') {
+        revealSkeletons();
+      } else {
+        window.addEventListener('load', revealSkeletons);
+        // Safety net: never show skeletons for more than 4 seconds
+        setTimeout(revealSkeletons, 4000);
+      }
+    })();
+  </script>
 </body>
 
 </html>
